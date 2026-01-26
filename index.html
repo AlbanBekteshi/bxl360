@@ -8,8 +8,21 @@
   <meta name="description" content="Club de basket pour enfants de 4 à 18 ans à Bruxelles. Entraînements par catégories U6 à U18, stages vacances et matchs amicaux." />
   <meta name="keywords" content="basket enfants, basket jeunes, mini basket, U6, U8, U10, U12, U14, U16, U18, Bruxelles" />
 
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://albanbekteshi.github.io/bxl360/" />
+  <meta property="og:title" content="BXL 360 Basketball - Club de basket jeunes à Bruxelles" />
+  <meta property="og:description" content="Club de basket pour enfants de 4 à 18 ans à Bruxelles. Entraînements par catégories U6 à U18, stages vacances et matchs amicaux." />
+  <meta property="og:image" content="https://albanbekteshi.github.io/bxl360/assets/img/logo.png" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="BXL 360 Basketball - Club de basket jeunes à Bruxelles" />
+  <meta name="twitter:description" content="Club de basket pour enfants de 4 à 18 ans à Bruxelles. Entraînements par catégories U6 à U18, stages vacances et matchs amicaux." />
+  <meta name="twitter:image" content="https://albanbekteshi.github.io/bxl360/assets/img/logo.png" />
+
   <!-- Favicons -->
-  <link href="assets/img/logo.png" rel="icon" />
+  <link href="assets/img/logo.webp" rel="icon" type="image/webp" />
   <link href="assets/img/logo.png" rel="apple-touch-icon" />
 
   <!-- Fonts -->
@@ -26,6 +39,35 @@
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet" />
+
+  <!-- Schema.org Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SportsTeam",
+    "name": "BXL 360 Basketball",
+    "sport": "Basketball",
+    "description": "Club de basket pour enfants de 4 à 18 ans à Bruxelles",
+    "url": "https://albanbekteshi.github.io/bxl360/",
+    "logo": "https://albanbekteshi.github.io/bxl360/assets/img/logo.png",
+    "email": "bxl360basketball@gmail.com",
+    "telephone": "+32 496 39 50 80",
+    "location": {
+      "@type": "Place",
+      "name": "Campus CERIA",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Sentier de la Drève 16",
+        "addressLocality": "Anderlecht",
+        "postalCode": "1070",
+        "addressCountry": "BE"
+      }
+    },
+    "sameAs": [
+      "https://www.instagram.com/bxl360basketballteam/"
+    ]
+  }
+  </script>
 </head>
 
 <body class="index-page">
@@ -33,7 +75,7 @@
   <header id="header" class="header d-flex align-items-center fixed-top">
     <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
       <a href="index.html" class="logo d-flex align-items-center">
-        <img src="assets/img/logo.png" alt="BXL 360 Basketball" class="logo-img" />
+        <img src="assets/img/logo.webp" alt="BXL 360 Basketball" class="logo-img" />
         <h1 class="sitename">BXL 360 Basketball</h1>
       </a>
 
@@ -47,7 +89,7 @@
           <li><a href="#sponsors">Nos Partenaires</a></li>
           <li><a href="#contact">Contact & Inscriptions</a></li>
         </ul>
-        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list" aria-label="Ouvrir le menu" role="button" tabindex="0"></i>
       </nav>
     </div>
   </header>
@@ -56,7 +98,7 @@
     <!-- ======= Hero Section ======= -->
     <section id="hero" class="hero section dark-background">
       <div class="hero-container">
-        <video autoplay muted loop playsinline class="video-background">
+        <video autoplay muted loop playsinline class="video-background" poster="assets/img/logo.webp" preload="metadata">
           <source src="assets/img/video/BXL360.mp4" type="video/mp4" />
         </video>
       </div>
@@ -78,7 +120,7 @@
           </div>
           <div class="col-lg-6" data-aos="fade-left" data-aos-delay="300">
               <div class="image-stack-item image-stack-item-top" data-aos="zoom-in" data-aos-delay="400">
-                <img src="assets/img/acc.jpg" alt="Kids training" class="img-fluid rounded-4 shadow-lg" />
+                <img src="assets/img/acc.jpg" alt="Kids training" class="img-fluid rounded-4 shadow-lg" loading="lazy" />
               </div>
           </div>
         </div>
@@ -148,49 +190,49 @@
                 <!-- Sponsor 1 -->
                 <div class="col-6 col-md-3">
                   <div class="p-3 border rounded-3 sponsor-card">
-                    <img src="assets/img/sponsor/ozfood.png" alt="Logo ozfood" class="sponsor-logo">
+                    <img src="assets/img/sponsor/ozfood.png" alt="OzFood" class="sponsor-logo" loading="lazy">
                   </div>
                 </div>
 
                 <!-- Sponsor 2 -->
                 <div class="col-6 col-md-3">
                   <div class="p-3 border rounded-3 sponsor-card">
-                    <img src="assets/img/sponsor/light-logo-lift.png" alt="Logo lift" class="sponsor-logo">
+                    <img src="assets/img/sponsor/light-logo-lift.png" alt="Lift" class="sponsor-logo" loading="lazy">
                   </div>
                 </div>
 
                 <!-- Sponsor 3 -->
                 <div class="col-6 col-md-3">
                   <div class="p-3 border rounded-3 sponsor-card">
-                    <img src="assets/img/sponsor/square.png" alt="Logo square" class="sponsor-logo">
+                    <img src="assets/img/sponsor/square.png" alt="Square" class="sponsor-logo" loading="lazy">
                   </div>
                 </div>
 
                 <!-- Sponsor 4 -->
                 <div class="col-6 col-md-3">
                   <div class="p-3 border rounded-3 sponsor-card">
-                    <img src="assets/img/sponsor/socar.png" alt="Logo sss" class="sponsor-logo">
+                    <img src="assets/img/sponsor/socar.png" alt="Socar" class="sponsor-logo" loading="lazy">
                   </div>
                 </div>
                 
                 <!-- Sponsor 5 -->
                 <div class="col-6 col-md-3">
                   <div class="p-3 border rounded-3 sponsor-card">
-                    <img src="assets/img/sponsor/quaie.png" alt="Logo quaie" class="sponsor-logo">
+                    <img src="assets/img/sponsor/quaie.png" alt="Quaie" class="sponsor-logo" loading="lazy">
                   </div>
                 </div>
 
                  <!-- Sponsor 6 -->
                 <div class="col-6 col-md-3">
                   <div class="p-3 border rounded-3 sponsor-card">
-                    <img src="assets/img/sponsor/YC.jpg" alt="Logo YC" class="sponsor-logo">
+                    <img src="assets/img/sponsor/YC.jpg" alt="YC" class="sponsor-logo" loading="lazy">
                   </div>
                 </div>
 
                  <!-- Sponsor 7 -->
                 <div class="col-6 col-md-3">
                   <div class="p-3 border rounded-3 sponsor-card">
-                    <img src="assets/img/sponsor/big.jpg" alt="Logo big" class="sponsor-logo">
+                    <img src="assets/img/sponsor/big.jpg" alt="Big" class="sponsor-logo" loading="lazy">
                   </div>
                 </div>
               </div>
@@ -218,7 +260,7 @@
         <div class="row align-items-center gy-4">
           <div class="col-lg-6" data-aos="fade-right" data-aos-delay="200">
             <div class="students-life-img position-relative">
-              <img src="assets/img/person/vie.jpg" class="img-fluid rounded-4 shadow-sm" alt="Vie de club" />
+              <img src="assets/img/person/vie.jpg" class="img-fluid rounded-4 shadow-sm" alt="Vie de club" loading="lazy" />
               <div class="img-overlay">
                 <h3>Découvre nos activités</h3>
                 <a href="#events" class="explore-btn">Voir les événements <i class="bi bi-arrow-right"></i></a>
@@ -456,7 +498,7 @@
                 </div>
               </div>
               <a href="assets/img/Tournoi.jpg" target="_blank" class="event-flyer-thumb">
-                <img src="assets/img/Tournoi.jpg" alt="Affiche Tournoi">
+                <img src="assets/img/Tournoi.jpg" alt="Affiche du tournoi BXL 360" loading="lazy">
                 <div class="flyer-overlay"><i class="bi bi-zoom-in"></i></div>
               </a>
             </div>
@@ -596,9 +638,7 @@
             <p><strong>Email:</strong> <span>bxl360basketball@gmail.com</span></p>
           </div>
           <div class="social-links d-flex mt-4">
-            <a href="#"><i class="bi bi-facebook"></i></a>
-            <a href="https://www.instagram.com/p/DNtpDTy2DQJ/"><i class="bi bi-instagram"></i></a>
-            <a href="#"><i class="bi bi-youtube"></i></a>
+            <a href="https://www.instagram.com/bxl360basketballteam/" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
           </div>
         </div>
 
@@ -607,8 +647,8 @@
           <ul>
             <li><a href="#hero">Accueil</a></li>
             <li><a href="#about">Le Club</a></li>
-            <li><a href="#featured-programs">Catégories</a></li>
             <li><a href="#teams">Équipes</a></li>
+            <li><a href="#events">Événements</a></li>
             <li><a href="#contact">Inscriptions</a></li>
           </ul>
         </div>
@@ -616,10 +656,10 @@
         <div class="col-lg-2 col-md-3 footer-links">
           <h4>Pratique</h4>
           <ul>
-            <li><a href="#events">Calendrier</a></li>
-            <li><a href="#recent-news">Actualités</a></li>
-            <li><a href="#">Règlement intérieur</a></li>
-            <li><a href="#">Charte des parents</a></li>
+            <li><a href="#tournoi">Tournoi</a></li>
+            <li><a href="#sponsors">Partenaires</a></li>
+            <li><a href="#personal-training">Entraînement</a></li>
+            <li><a href="#contact">Contact</a></li>
           </ul>
         </div>
 
