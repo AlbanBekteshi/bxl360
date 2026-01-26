@@ -2133,6 +2133,108 @@ section,
   transform: translateY(-3px);
 }
 
+/* Event card with flyer thumbnail (Option C) */
+.events .event-card-with-image {
+  position: relative;
+}
+
+.events .event-card-with-image .event-content {
+  padding-right: 140px;
+}
+
+.events .event-flyer-thumb {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 110px;
+  height: 150px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.events .event-flyer-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.events .event-flyer-thumb .flyer-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.events .event-flyer-thumb .flyer-overlay i {
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+.events .event-flyer-thumb:hover {
+  transform: translateY(-50%) scale(1.05);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.events .event-flyer-thumb:hover .flyer-overlay {
+  opacity: 1;
+}
+
+.events .event-tag.tournoi {
+  background-color: #7c3aed;
+}
+
+.events .tournoi-date-accent {
+  background: linear-gradient(135deg, #7c3aed 0%, #a855f7 100%);
+}
+
+.events .btn-flyer {
+  padding: 0.5rem 1rem;
+  background-color: transparent;
+  color: #7c3aed;
+  border-radius: 50px;
+  font-weight: 500;
+  transition: all 0.3s;
+  border: 1px solid #7c3aed;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.events .btn-flyer:hover {
+  background-color: rgba(124, 58, 237, 0.1);
+}
+
+@media (max-width: 992px) {
+  .events .event-card-with-image .event-content {
+    padding-right: 1.5rem;
+  }
+
+  .events .event-flyer-thumb {
+    position: relative;
+    right: auto;
+    top: auto;
+    transform: none;
+    width: 100%;
+    height: 200px;
+    margin-top: 1rem;
+  }
+
+  .events .event-flyer-thumb:hover {
+    transform: scale(1.02);
+  }
+}
+
 @media (max-width: 768px) {
   .events .event-card {
     flex-direction: column;
@@ -2158,6 +2260,192 @@ section,
 
   .events .event-actions {
     flex-direction: column;
+  }
+}
+
+/*--------------------------------------------------------------
+# Tournoi Banner Section
+--------------------------------------------------------------*/
+.tournoi-banner {
+  position: relative;
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.tournoi-banner .tournoi-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.tournoi-banner .tournoi-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.85) 0%, rgba(88, 28, 135, 0.7) 100%);
+}
+
+.tournoi-banner .container {
+  position: relative;
+  z-index: 2;
+}
+
+.tournoi-banner .tournoi-content {
+  max-width: 600px;
+  color: #fff;
+}
+
+.tournoi-banner .tournoi-badge {
+  display: inline-block;
+  background: var(--accent-color);
+  color: #fff;
+  padding: 0.4rem 1rem;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 1rem;
+}
+
+.tournoi-banner .tournoi-content h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.tournoi-banner .tournoi-date {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: var(--accent-color);
+}
+
+.tournoi-banner .tournoi-date i {
+  font-size: 1.5rem;
+}
+
+.tournoi-banner .tournoi-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.tournoi-banner .tournoi-info .info-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 1.1rem;
+}
+
+.tournoi-banner .tournoi-info .info-item i {
+  color: var(--accent-color);
+  font-size: 1.2rem;
+  width: 24px;
+}
+
+.tournoi-banner .tournoi-schedule {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 1rem;
+  padding: 1rem 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.tournoi-banner .tournoi-schedule .schedule-item {
+  font-size: 1rem;
+}
+
+.tournoi-banner .tournoi-schedule .schedule-item strong {
+  color: var(--accent-color);
+}
+
+.tournoi-banner .tournoi-note {
+  font-size: 0.95rem;
+  opacity: 0.9;
+  margin-bottom: 1.5rem;
+  font-style: italic;
+}
+
+.tournoi-banner .tournoi-actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.tournoi-banner .btn-tournoi-primary {
+  display: inline-block;
+  padding: 0.85rem 2rem;
+  background: var(--accent-color);
+  color: #fff;
+  border-radius: 50px;
+  font-weight: 600;
+  transition: all 0.3s;
+  text-decoration: none;
+}
+
+.tournoi-banner .btn-tournoi-primary:hover {
+  background: color-mix(in srgb, var(--accent-color), #000 15%);
+  transform: translateY(-3px);
+}
+
+.tournoi-banner .btn-tournoi-secondary {
+  display: inline-block;
+  padding: 0.85rem 2rem;
+  background: transparent;
+  color: #fff;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 50px;
+  font-weight: 600;
+  transition: all 0.3s;
+  text-decoration: none;
+}
+
+.tournoi-banner .btn-tournoi-secondary:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: #fff;
+}
+
+@media (max-width: 768px) {
+  .tournoi-banner {
+    min-height: 600px;
+  }
+
+  .tournoi-banner .tournoi-content h2 {
+    font-size: 2rem;
+  }
+
+  .tournoi-banner .tournoi-date {
+    font-size: 1.1rem;
+  }
+
+  .tournoi-banner .tournoi-schedule {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .tournoi-banner .tournoi-actions {
+    flex-direction: column;
+  }
+
+  .tournoi-banner .btn-tournoi-primary,
+  .tournoi-banner .btn-tournoi-secondary {
+    text-align: center;
   }
 }
 
