@@ -2215,6 +2215,23 @@ section,
   background-color: rgba(124, 58, 237, 0.1);
 }
 
+.events .event-tag.stage {
+  background-color: #8b5cf6;
+}
+
+.events .stage-date-accent {
+  background: linear-gradient(135deg, #8b5cf6 0%, #a78bfa 100%);
+}
+
+.events .btn-flyer-stage {
+  color: #8b5cf6;
+  border-color: #8b5cf6;
+}
+
+.events .btn-flyer-stage:hover {
+  background-color: rgba(139, 92, 246, 0.1);
+}
+
 @media (max-width: 992px) {
   .events .event-card-with-image .event-content {
     padding-right: 1.5rem;
