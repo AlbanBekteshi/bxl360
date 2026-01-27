@@ -1,0 +1,6 @@
+# robots.txt for BXL 360 Basketball
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://www.bxl360basketball.be/sitemap.xml
