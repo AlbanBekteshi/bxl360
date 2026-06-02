@@ -11,7 +11,10 @@
       "Bash(git remote remove:*)",
       "Bash(gh repo edit:*)",
       "Bash(gh api:*)",
-      "Bash(dir:*)"
+      "Bash(dir:*)",
+      "Bash(python -c ' *)",
+      "mcp__Claude_Preview__preview_start",
+      "Bash(git config *)"
     ]
   }
 }
