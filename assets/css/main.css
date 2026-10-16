@@ -7887,3 +7887,70 @@ section,
   .slot-time { min-width: 90px; font-size: 0.76rem; }
   .schedule-badge { font-size: 0.68rem; padding: 2px 8px; }
 }
+
+/* Filter buttons */
+.schedule-filter-btn {
+  padding: 5px 14px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border: 1.5px solid color-mix(in srgb, var(--default-color), transparent 70%);
+  background: transparent;
+  color: var(--default-color);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.schedule-filter-btn:hover {
+  opacity: 0.85;
+  transform: translateY(-1px);
+}
+
+.schedule-filter-btn.active {
+  box-shadow: 0 2px 10px rgba(0,0,0,.15);
+  transform: translateY(-1px);
+}
+
+/* "Tout afficher" active state */
+.schedule-filter-btn[data-cat="all"].active {
+  background: var(--accent-color);
+  border-color: var(--accent-color);
+  color: #fff;
+}
+
+/* Category-coloured buttons inherit badge palette */
+.schedule-filter-btn.badge-baby  { border-color:#a78bfa; color:#a78bfa; }
+.schedule-filter-btn.badge-u8    { border-color:#34d399; color:#34d399; }
+.schedule-filter-btn.badge-u10   { border-color:#60a5fa; color:#60a5fa; }
+.schedule-filter-btn.badge-u12   { border-color:#f472b6; color:#f472b6; }
+.schedule-filter-btn.badge-u14   { border-color:#fb923c; color:#fb923c; }
+.schedule-filter-btn.badge-u16   { border-color:#facc15; color:#ca8a04; }
+.schedule-filter-btn.badge-u18   { border-color:#f87171; color:#f87171; }
+.schedule-filter-btn.badge-u21   { border-color:#c084fc; color:#c084fc; }
+.schedule-filter-btn.badge-pro   { border-color:#94a3b8; color:#94a3b8; }
+.schedule-filter-btn.badge-init  { border-color:#2dd4bf; color:#0f766e; }
+
+.schedule-filter-btn.badge-baby.active  { background:#a78bfa; color:#fff; }
+.schedule-filter-btn.badge-u8.active    { background:#34d399; color:#fff; }
+.schedule-filter-btn.badge-u10.active   { background:#60a5fa; color:#fff; }
+.schedule-filter-btn.badge-u12.active   { background:#f472b6; color:#fff; }
+.schedule-filter-btn.badge-u14.active   { background:#fb923c; color:#fff; }
+.schedule-filter-btn.badge-u16.active   { background:#facc15; color:#78350f; }
+.schedule-filter-btn.badge-u18.active   { background:#f87171; color:#fff; }
+.schedule-filter-btn.badge-u21.active   { background:#c084fc; color:#fff; }
+.schedule-filter-btn.badge-pro.active   { background:#94a3b8; color:#fff; }
+.schedule-filter-btn.badge-init.active  { background:#2dd4bf; color:#fff; }
+
+/* Slot filter states */
+.schedule-slot.slot-dimmed {
+  opacity: 0.25;
+  transition: opacity 0.25s ease;
+}
+
+.schedule-slot.slot-match {
+  background: color-mix(in srgb, var(--accent-color), transparent 92%);
+  border-radius: 8px;
+  transition: background 0.25s ease, opacity 0.25s ease;
+}

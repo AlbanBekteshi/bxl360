@@ -546,18 +546,19 @@
       </div>
       <div class="container" data-aos="fade-up" data-aos-delay="100">
 
-        <!-- Légende couleurs -->
-        <div class="d-flex flex-wrap gap-2 justify-content-center mb-4">
-          <span class="schedule-badge badge-baby">Baby</span>
-          <span class="schedule-badge badge-u8">U8</span>
-          <span class="schedule-badge badge-u10">U10</span>
-          <span class="schedule-badge badge-u12">U12</span>
-          <span class="schedule-badge badge-u14">U14</span>
-          <span class="schedule-badge badge-u16">U16</span>
-          <span class="schedule-badge badge-u18">U18</span>
-          <span class="schedule-badge badge-u21">U21</span>
-          <span class="schedule-badge badge-pro">P3 / P4A / P4B</span>
-          <span class="schedule-badge badge-init">Initiation</span>
+        <!-- Filtres catégories -->
+        <div class="schedule-filters d-flex flex-wrap gap-2 justify-content-center mb-4">
+          <button class="schedule-filter-btn active" data-cat="all">Tout afficher</button>
+          <button class="schedule-filter-btn badge-baby"  data-cat="baby">Baby</button>
+          <button class="schedule-filter-btn badge-u8"    data-cat="u8">U8</button>
+          <button class="schedule-filter-btn badge-u10"   data-cat="u10">U10</button>
+          <button class="schedule-filter-btn badge-u12"   data-cat="u12">U12</button>
+          <button class="schedule-filter-btn badge-u14"   data-cat="u14">U14</button>
+          <button class="schedule-filter-btn badge-u16"   data-cat="u16">U16</button>
+          <button class="schedule-filter-btn badge-u18"   data-cat="u18">U18</button>
+          <button class="schedule-filter-btn badge-u21"   data-cat="u21">U21</button>
+          <button class="schedule-filter-btn badge-pro"   data-cat="pro">P3 / P4A / P4B</button>
+          <button class="schedule-filter-btn badge-init"  data-cat="init">Initiation</button>
         </div>
 
         <div class="row g-4">
@@ -569,7 +570,7 @@
                 <i class="bi bi-calendar3"></i> Mercredi
               </div>
               <div class="schedule-slots">
-                <div class="schedule-slot">
+                <div class="schedule-slot" data-cats="u8 u10 baby">
                   <div class="slot-time">16:00 – 17:30</div>
                   <div class="slot-tags">
                     <span class="schedule-badge badge-u8">U8</span>
@@ -577,7 +578,7 @@
                     <span class="schedule-badge badge-baby">Baby</span>
                   </div>
                 </div>
-                <div class="schedule-slot">
+                <div class="schedule-slot" data-cats="u12 u14 u16">
                   <div class="slot-time">17:30 – 19:00</div>
                   <div class="slot-tags">
                     <span class="schedule-badge badge-u12">U12</span>
@@ -585,7 +586,7 @@
                     <span class="schedule-badge badge-u16">U16</span>
                   </div>
                 </div>
-                <div class="schedule-slot">
+                <div class="schedule-slot" data-cats="u18 u21 init">
                   <div class="slot-time">19:00 – 20:30</div>
                   <div class="slot-tags">
                     <span class="schedule-badge badge-u18">U18</span>
@@ -593,7 +594,7 @@
                     <span class="schedule-badge badge-init">Initiation</span>
                   </div>
                 </div>
-                <div class="schedule-slot">
+                <div class="schedule-slot" data-cats="pro">
                   <div class="slot-time">20:30 – 22:00</div>
                   <div class="slot-tags">
                     <span class="schedule-badge badge-pro">P4A</span>
@@ -612,7 +613,7 @@
                 <i class="bi bi-calendar3"></i> Vendredi
               </div>
               <div class="schedule-slots">
-                <div class="schedule-slot">
+                <div class="schedule-slot" data-cats="u8 u10 baby">
                   <div class="slot-time">17:00 – 18:30</div>
                   <div class="slot-tags">
                     <span class="schedule-badge badge-u8">U8</span>
@@ -620,7 +621,7 @@
                     <span class="schedule-badge badge-baby">Baby</span>
                   </div>
                 </div>
-                <div class="schedule-slot">
+                <div class="schedule-slot" data-cats="u12 u14 u16">
                   <div class="slot-time">18:30 – 20:00</div>
                   <div class="slot-tags">
                     <span class="schedule-badge badge-u12">U12</span>
@@ -628,7 +629,7 @@
                     <span class="schedule-badge badge-u16">U16</span>
                   </div>
                 </div>
-                <div class="schedule-slot">
+                <div class="schedule-slot" data-cats="u18 u21 pro init">
                   <div class="slot-time">20:00 – 21:30</div>
                   <div class="slot-tags">
                     <span class="schedule-badge badge-u18">U18</span>
@@ -648,7 +649,7 @@
                 <i class="bi bi-calendar3"></i> Samedi
               </div>
               <div class="schedule-slots">
-                <div class="schedule-slot">
+                <div class="schedule-slot" data-cats="u10 u14 u18">
                   <div class="slot-time">12:45</div>
                   <div class="slot-tags">
                     <span class="schedule-badge badge-u10">U10</span>
@@ -656,7 +657,7 @@
                     <span class="schedule-badge badge-u18">U18</span>
                   </div>
                 </div>
-                <div class="schedule-slot">
+                <div class="schedule-slot" data-cats="u12 u16 u21">
                   <div class="slot-time">14:30</div>
                   <div class="slot-tags">
                     <span class="schedule-badge badge-u12">U12</span>
@@ -664,7 +665,7 @@
                     <span class="schedule-badge badge-u21">U21</span>
                   </div>
                 </div>
-                <div class="schedule-slot">
+                <div class="schedule-slot" data-cats="pro">
                   <div class="slot-time">17:00</div>
                   <div class="slot-tags">
                     <span class="schedule-badge badge-pro">P3</span>
@@ -678,6 +679,31 @@
 
         </div>
       </div>
+
+      <script>
+        (function () {
+          const btns  = document.querySelectorAll('.schedule-filter-btn');
+          const slots = document.querySelectorAll('.schedule-slot[data-cats]');
+
+          btns.forEach(btn => {
+            btn.addEventListener('click', () => {
+              btns.forEach(b => b.classList.remove('active'));
+              btn.classList.add('active');
+
+              const cat = btn.dataset.cat;
+              slots.forEach(slot => {
+                if (cat === 'all' || slot.dataset.cats.split(' ').includes(cat)) {
+                  slot.classList.remove('slot-dimmed');
+                  slot.classList.add('slot-match');
+                } else {
+                  slot.classList.add('slot-dimmed');
+                  slot.classList.remove('slot-match');
+                }
+              });
+            });
+          });
+        })();
+      </script>
     </section>
 
     <!-- ======= Contact & Inscriptions ======= -->
