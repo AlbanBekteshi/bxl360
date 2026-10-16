@@ -7881,6 +7881,7 @@ section,
 .badge-u18   { background: color-mix(in srgb,#f87171,transparent 80%); border-color:#f87171; color:#f87171; }
 .badge-u21   { background: color-mix(in srgb,#c084fc,transparent 80%); border-color:#c084fc; color:#c084fc; }
 .badge-pro   { background: color-mix(in srgb,#94a3b8,transparent 80%); border-color:#94a3b8; color:#94a3b8; }
+.badge-init  { background: color-mix(in srgb,#2dd4bf,transparent 80%); border-color:#2dd4bf; color:#0f766e; }
 
 @media (max-width: 576px) {
   .slot-time { min-width: 90px; font-size: 0.76rem; }
