@@ -680,30 +680,6 @@
         </div>
       </div>
 
-      <script>
-        (function () {
-          const btns  = document.querySelectorAll('.schedule-filter-btn');
-          const slots = document.querySelectorAll('.schedule-slot[data-cats]');
-
-          btns.forEach(btn => {
-            btn.addEventListener('click', () => {
-              btns.forEach(b => b.classList.remove('active'));
-              btn.classList.add('active');
-
-              const cat = btn.dataset.cat;
-              slots.forEach(slot => {
-                if (cat === 'all' || slot.dataset.cats.split(' ').includes(cat)) {
-                  slot.classList.remove('slot-dimmed');
-                  slot.classList.add('slot-match');
-                } else {
-                  slot.classList.add('slot-dimmed');
-                  slot.classList.remove('slot-match');
-                }
-              });
-            });
-          });
-        })();
-      </script>
     </section>
 
     <!-- ======= Contact & Inscriptions ======= -->
@@ -834,5 +810,31 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+
+  <!-- Schedule filters -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const btns  = document.querySelectorAll('.schedule-filter-btn');
+      const slots = document.querySelectorAll('.schedule-slot[data-cats]');
+
+      btns.forEach(function(btn) {
+        btn.addEventListener('click', function() {
+          btns.forEach(function(b) { b.classList.remove('active'); });
+          btn.classList.add('active');
+
+          var cat = btn.dataset.cat;
+          slots.forEach(function(slot) {
+            if (cat === 'all' || slot.dataset.cats.split(' ').includes(cat)) {
+              slot.classList.remove('slot-dimmed');
+              slot.classList.add('slot-match');
+            } else {
+              slot.classList.add('slot-dimmed');
+              slot.classList.remove('slot-match');
+            }
+          });
+        });
+      });
+    });
+  </script>
 </body>
 </html>
